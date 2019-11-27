@@ -1,0 +1,570 @@
+html,
+#app {
+  height: 100%;
+}
+body {
+  height: calc(100% - 100px);
+}
+.breadcrumb a {
+  color: #7a8199;
+  cursor: pointer;
+  user-select: none;
+}
+.breadcrumb a:hover {
+  color: #fff;
+}
+.breadcrumb a:last-child:hover {
+  color: #7a8199;
+}
+.breadcrumb a i {
+  display: inline-block;
+  width: 6px;
+  height: 11px;
+  margin: 0 10px;
+  background: url("../images/basic/arrow_right.png") no-repeat;
+  background-size: cover;
+}
+.list-content p {
+  display: block;
+}
+.list-content p span {
+  font-size: 18px !important;
+}
+.secret-content66 {
+  width: 660px;
+  padding-top: 60px;
+}
+.secret-content72 {
+  width: 720px;
+  padding-top: 60px;
+}
+.secret-title {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.secret-subtitle {
+  margin-bottom: 60px;
+}
+.secret-list li {
+  height: 120px;
+  padding-left: 40px;
+  padding-right: 60px;
+  border-radius: 6px;
+  background-color: #1f222e;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.secret-list li.first-li {
+  height: 60px;
+}
+.secret-list li.first-li .title {
+  margin-bottom: 0;
+}
+.secret-list li:last-child {
+  margin-bottom: 0;
+}
+.secret-list li .title {
+  font-weight: normal;
+  color: #7a8199;
+  margin-bottom: 15px;
+}
+.secret-list li .li-rt {
+  font-size: 0;
+}
+.secret-list li .li-btBox {
+  flex: 1;
+}
+.secret-list li .li-btBox .li-bt {
+  display: flex;
+  justify-content: space-between;
+}
+.secret-list li .li-btBox .li-bt span {
+  color: #fff;
+  font-weight: bold;
+}
+.secret-list li .li-btBox .li-bt span i {
+  color: #7a8199;
+}
+.secret-list li .li-btBox .li-bt .li-bt-btn {
+  font-size: 0;
+}
+.secret-list li .li-btBox .li-bt .li-bt-btn .secret-a {
+  font-size: 18px;
+  margin-right: 40px;
+  font-weight: bold;
+}
+.secret-list li .li-btBox .li-bt .li-bt-btn .secret-a:last-child {
+  margin-right: 0;
+}
+.secret-tab {
+  width: 100%;
+  border-radius: 6px;
+  display: flex;
+  overflow: hidden;
+}
+.secret-tab li {
+  flex: 1;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  background-color: #1f222e;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+.secret-tab li.tabActive {
+  background-color: #c31739;
+}
+.secret-input {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 0 20px;
+  border-radius: 6px;
+  font-size: 18px;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  border: 1px solid #33384d;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-in-out;
+}
+.secret-input:focus {
+  border-color: #c31739;
+}
+.secret-input.secret-input-bordernone {
+  border: none;
+  background-color: #1f222e !important;
+}
+.secret-input.secret-input-bordernone::-webkit-input-placeholder {
+  color: #7a8199;
+}
+.secret-input.secret-input-bordernone:focus {
+  border-color: #33384d;
+}
+.secret-input::-webkit-input-placeholder {
+  color: #525666;
+}
+.inputTipBox {
+  padding-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.inputTipBox.inputTipBox-select {
+  overflow: inherit;
+}
+.inputTipBox .inputTip-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.inputTipBox .inputTip-title span i {
+  color: #c31739;
+}
+.inputTipBox .inputTipDiv {
+  background-color: #1f222e;
+  position: relative;
+  z-index: 20;
+}
+.inputTipBox .inputTipDiv .select-input {
+  padding-right: 60px;
+}
+.inputTipBox .inputTipDiv .discount-btn {
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  font-size: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+.inputTipBox .inputTipDiv .selectMenu {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  background-color: #272b38;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  transition: all 0.3s linear;
+  z-index: 20;
+  overflow: hidden;
+}
+.inputTipBox .inputTipDiv .selectMenu.selectMenuActive {
+  height: 180px;
+  padding: 10px 0;
+}
+.inputTipBox .inputTipDiv .selectMenu li {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  user-select: none;
+  cursor: pointer;
+}
+.inputTipBox .inputTipDiv .selectMenu li:hover {
+  color: #fff;
+}
+.inputTipBox .inputTipDiv .selectMenu li.liActive {
+  color: #fff;
+}
+.inputTipBox .inputTipDiv .secret-btn {
+  width: 100px;
+  background-color: transparent;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #c31739;
+}
+.inputTipBox .secret-inputTip {
+  background-color: #1a1c26;
+}
+.inputTipBox .inputTipMsg {
+  z-index: 10;
+  font-size: 16px;
+  position: absolute;
+  top: 55px;
+  color: #c31739;
+  opacity: 0;
+  transition: all 0.15s linear;
+}
+.inputTipBox .inputTipMsg.inputTipMsgActive {
+  opacity: 1;
+  top: 92px;
+}
+.secret-btn {
+  display: block;
+  width: 100%;
+  height: 48px;
+  background-color: #c31739;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+}
+.secret-btn:active {
+  opacity: 0.6;
+}
+.secret-a {
+  color: #c31739;
+  cursor: pointer;
+  user-select: none;
+}
+.secret-a:active {
+  opacity: 0.6;
+}
+.arrowDown {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  background: url("assets/images/basic/arrow_down.png") no-repeat;
+  background-size: cover !important;
+  transition: 0.2s;
+}
+.arrowDown.arrowActive {
+  transform: rotate(180deg);
+}
+body {
+  font-size: 18px;
+  color: #7a8199;
+  background-color: #12131a;
+  font-family: "Microsoft YaHei UI";
+  -webkit-tap-highlight-color: transparent;
+}
+/*去掉input number上下箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.myPopup {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 99;
+}
+.myPopup.verificationPopup .myPopupBox {
+  padding-left: 0;
+  padding-right: 0;
+}
+.myPopup.verificationPopup .myPopupBox .verificationForm {
+  padding: 0 40px;
+}
+.myPopup.verificationPopup .myPopupBox .popupBtn {
+  display: flex;
+  margin-top: 60px;
+  border-top: 1px solid #1a1c26;
+}
+.myPopup.verificationPopup .myPopupBox .popupBtn .secret-btn {
+  height: 60px;
+  border-radius: 0;
+}
+.myPopup.verificationPopup .myPopupBox .popupBtn .secret-btn:first-child {
+  color: #525666;
+  background-color: #1f222e;
+}
+.myPopup .myPopupBox {
+  width: 480px;
+  padding-top: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #1f222e;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.myPopup .myPopupBox .secret-title {
+  font-size: 24px;
+}
+.myPopup .myPopupBox .secret-inputTip {
+  border-radius: 24px;
+}
+.myPopup .myPopupBox .secret-inputTip {
+  padding: 0 30px;
+}
+.myPopup .myPopup-tip {
+  width: 400px;
+  text-align: center;
+  background-color: #1f222e;
+  padding: 60px 40px;
+  border-radius: 12px;
+  position: relative;
+}
+.myPopup .myPopup-tip .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  z-index: 999;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all 0.15s linear;
+}
+.myPopup .myPopup-tip .close-btn:hover {
+  opacity: 1;
+}
+.myPopup .myPopup-tip .close-btn img {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+.myPopup .myPopup-tip h3.title {
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.myPopup .myPopup-tip .subtitle {
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+.myPopup .myPopup-tip .secret-btn {
+  background-color: #c31739;
+}
+.nav ul .router-link-active {
+  color: #c31739;
+}
+.copy-btn {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-size: cover !important;
+  cursor: pointer;
+  user-select: none;
+}
+.copy-btn:active {
+  opacity: 0.6;
+}
+.secret-log .secret-title {
+  margin-bottom: 0;
+}
+.secret-log .secret-table {
+  margin-top: 40px;
+}
+.secret-log .secret-table tr:first-child {
+  background-color: #1f222e;
+}
+.secret-log .secret-table tr td {
+  flex: 1;
+}
+.secret-log .secret-table tr td:nth-child(2),
+.secret-log .secret-table tr td:nth-child(3) {
+  flex: 1.8;
+}
+.secret-log .secret-table tr td:nth-child(4),
+.secret-log .secret-table tr td:nth-child(5) {
+  flex: 1.3;
+}
+.secret-table {
+  display: block;
+  margin-top: 60px;
+  border-radius: 6px;
+  border: 1px solid #33384d;
+  overflow: hidden;
+}
+.secret-table tr {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #33384d;
+}
+.secret-table tr:last-child {
+  border-bottom: none;
+}
+.secret-table tr.secret-table-title {
+  background-color: #1f222e;
+  justify-content: center;
+}
+.secret-table tr td {
+  display: block;
+  flex: 1;
+  text-align: center;
+}
+.secret-table tr td:nth-child(2),
+.secret-table tr td:nth-child(3),
+.secret-table tr td:nth-child(4) {
+  flex: 1.4;
+}
+.secret-table tr td:last-child {
+  flex: 2;
+}
+.detail-table {
+  display: block;
+  margin-top: 40px;
+  border: 1px solid #33384d;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.detail-table tr {
+  display: flex;
+  border-bottom: 1px solid #33384d;
+}
+.detail-table tr:last-child {
+  border-bottom: none;
+}
+.detail-table tr td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  text-align: center;
+}
+.detail-table tr td:first-child {
+  width: 140px;
+  background-color: #1f222e;
+}
+.detail-table tr td:last-child {
+  flex: 1;
+  padding: 12px 60px;
+}
+.detail-table tr.hashTr td span {
+  width: 100%;
+  word-break: break-all;
+  line-height: 1.5;
+  text-align: center;
+}
+.transferIn {
+  padding-top: 60px;
+  width: 750px;
+}
+.transferIn .subtitle {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.transferIn .tip {
+  line-height: 1.5;
+  margin-bottom: 70px;
+}
+.transferIn .tip span {
+  color: #c31739;
+}
+.transferIn .qrCodeBox {
+  text-align: center;
+}
+.transferIn .qrCodeBox .qrCode {
+  display: flex;
+  width: 240px;
+  height: 240px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin: 0 auto;
+}
+.transferIn .qrCodeBox .qrCodeBox-tip {
+  margin-top: 20px;
+}
+.transferIn .qrCodeBox .qrCodeBox-address {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.transferIn .qrCodeBox .secret-btn {
+  width: 240px;
+  display: inline-block;
+}
+.secret-wrap {
+  width: 1200px;
+  min-height: 1200px;
+  margin: 0 auto;
+  padding: 60px;
+  position: relative;
+  border-radius: 12px;
+  background-color: #1a1c26;
+}
+.secret-wrap .secret-wrap-ct {
+  width: 660px;
+  margin: 0 auto;
+}
+.secret-wrap .secret-wrap-ct .title {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.secret-wrap .secret-wrap-ct .complete-btn {
+  margin-top: 50px;
+}
+.secret-back {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  color: #c31739;
+}
+.secret-back:active {
+  opacity: 0.6;
+}
+.secret-back img {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.noticeDetail .secret-wrap-ct .content p {
+  line-height: 1.5;
+}

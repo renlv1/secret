@@ -1,0 +1,526 @@
+$a8 = #2d3436 // 文字颜色
+$f2 = #fff // 背景颜色
+$c26 = #fff // 背景颜色
+$cor52 = #b3b3b3 // 字体颜色
+$btn31 = #0080f4 // 按钮颜色
+$border = #e5e5e5 // 边框颜色
+html, #app
+  height 100%
+body
+  height calc(100% - 100px)
+//面包屑
+.breadcrumb
+  a
+    color $a8
+    cursor pointer
+    user-select none
+    &:hover
+      color $cor52
+    &:last-child
+      &:hover
+        color $cor52
+    i
+      display inline-block
+      width 6px
+      height 11px
+      margin 0 10px
+      background url("./assets/images/basic/arrow_right.png") no-repeat
+      background-size cover
+//公告
+.list-content
+  p
+    display block
+    span
+      font-size 18px!important
+      color #2d3436 !important
+//内容部分
+.secret-content66
+  width 660px
+  padding-top 60px
+.secret-content72
+  width 720px
+  padding-top 60px
+//标题
+.secret-title
+  font-size 20px
+  color #2d3436
+  margin-bottom 30px
+.secret-tab
+  height 48px
+  line-height 48px
+  margin-bottom 30px
+  display flex
+  align-items center
+  justify-content flex-start
+  .li
+    width 330px
+    height 100%
+    text-align center
+    cursor pointer
+  .interior
+    background-color #0080f4
+    border-top-left-radius 6px
+    border-bottom-left-radius 6px
+    color #fff
+  .interior2
+    border 1px solid #e5e5e5
+    border-top-left-radius 6px
+    border-bottom-left-radius 6px
+    color #2d3436
+  .rolloff
+    border 1px solid #e5e5e5
+    border-top-right-radius 6px
+    border-bottom-right-radius 6px
+    color #2d3436
+  .rolloff2
+    background-color #0080f4
+    border-top-right-radius 6px
+    border-bottom-right-radius 6px
+    color #fff
+.secret-subtitle
+  margin-bottom 60px
+//列表
+.secret-list
+  li
+    height 120px
+    padding-left 40px
+    padding-right 60px
+    border-radius 6px
+    background-color $f2
+    margin-bottom 30px
+    border 1px solid $border
+    display flex
+    align-items center
+    justify-content space-between
+    &.first-li
+      height 60px
+      .title
+        margin-bottom 0
+    &:last-child
+      margin-bottom 0
+    .title
+      font-weight normal
+      color $a8
+      margin-bottom 15px
+    .li-rt
+      font-size 0
+    .li-btBox
+      flex 1
+      .li-bt
+        display flex
+        justify-content space-between
+        span
+          color $a8
+          font-weight bold
+          i
+            color $a8
+        .li-bt-btn
+          font-size 0
+          .secret-a
+            font-size 18px
+            margin-right 40px
+            font-weight bold
+            &:last-child
+              margin-right 0
+//  tab切换
+.secret-tab
+  width 100%
+  border-radius 6px
+  display flex
+  overflow hidden
+  li
+    flex 1
+    height 48px
+    line-height 48px
+    text-align center
+    background-color $f2
+    color #fff
+    cursor pointer
+    user-select none
+    &.tabActive
+      background-color $btn31
+// input框
+.secret-input
+  display block
+  width 100%
+  height 48px
+  padding 0 20px
+  border-radius 6px
+  font-size 18px
+  background-color transparent
+  color #2d3436
+  outline none
+  border 1px solid $border
+  box-sizing border-box
+  transition: border-color .15s ease-in-out
+  &:focus
+    border-color $btn31
+  &.secret-input-bordernone
+    border none
+    background-color $f2!important
+    &::-webkit-input-placeholder
+      color $a8
+    &:focus
+      border-color $border
+  &::-webkit-input-placeholder
+    color $cor52
+.inputTipBox
+  padding-bottom 30px
+  position relative
+  overflow hidden
+  &.inputTipBox-select
+    overflow inherit
+  .inputTip-title
+    display flex
+    justify-content space-between
+    margin-bottom 18px
+    color #2d3436
+    span
+      i
+        color $btn31
+  .inputTipDiv
+    background-color #fff
+    position relative
+    z-index 20
+    .select-input
+      padding-right 60px
+    .discount-btn
+      width 60px
+      height 100%
+      position absolute
+      font-size 0
+      top 0
+      display flex
+      align-items center
+      justify-content center
+      cursor pointer
+      user-select none
+    .selectMenu
+      width 100%
+      height 0
+      position absolute
+      top 50px
+      left 0
+      background-color #fff
+      box-shadow 0 0 0 0 rgba(232, 232, 232, .6)
+      border-bottom-right-radius 6px
+      border-bottom-left-radius 6px
+      transition all 0.3s linear
+      z-index 20
+      overflow hidden
+      &.selectMenuActive
+        height 180px
+        padding 10px 0
+        box-shadow 0 0 2px 2px rgba(232, 232, 232, .6)
+      li
+        height 40px
+        line-height 40px
+        padding 0 20px
+        user-select none
+        cursor pointer
+        &:hover
+          color $btn31
+        &.liActive
+          color $btn31
+    .secret-btn
+      width 100px
+      background-color transparent
+      margin-top 0
+      position absolute
+      top 0
+      right 0
+      color $btn31 !important
+  .secret-inputTip
+    background-color #fff
+  .inputTipMsg
+    z-index 10
+    font-size 16px
+    position absolute
+    top 55px
+    color $btn31
+    opacity 0
+    transition all .15s linear
+    &.inputTipMsgActive
+      opacity 1
+      top 92px
+// 按钮
+.secret-btn
+  display block
+  width 100%
+  height 48px
+  background-color $btn31
+  color #fff
+  border-radius 6px
+  font-size 18px
+  outline none
+  border none
+  user-select none
+  cursor pointer
+  &:active
+    opacity .6
+// 文字按钮
+.secret-a
+  color $btn31
+  cursor pointer
+  user-select none
+  &:active
+    opacity .6
+.arrowDown
+  display inline-block
+  width 14px
+  height 8px
+  background url("assets/images/basic/arrow_down.png") no-repeat
+  background-size contain!important
+  transition .2s
+  &.arrowActive
+    transform rotate(180deg)
+body
+  font-size 18px
+  color $a8
+  background-color #f0f0f0
+  //font-family "Microsoft YaHei UI"
+  font-family Arial
+  -webkit-tap-highlight-color transparent
+/*去掉input number上下箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance none
+input[type="number"]
+  -moz-appearance textfield
+// 弹窗提醒
+.myPopup
+  width 100%
+  height 100%
+  display flex
+  align-items center
+  justify-content center
+  position fixed
+  left 0
+  top 0
+  background-color rgba(0,0,0,0.5)
+  z-index 99
+  &.verificationPopup
+    .myPopupBox
+      padding-left 0
+      padding-right 0
+      .verificationForm
+        padding 0 40px
+      .popupBtn
+        display flex
+        margin-top 60px
+        border-top 1px solid $c26
+        .secret-btn
+          height 60px
+          border-radius 0
+          &:first-child
+            color $cor52
+            background-color $f2
+  .myPopupBox
+      width 480px
+      padding-top 60px
+      padding-left 40px
+      padding-right 40px
+      background-color $f2
+      border-radius 12px
+      overflow hidden
+      .secret-title
+        font-size 24px
+      .secret-inputTip
+        border-radius 24px
+      .secret-inputTip
+        padding 0 30px
+  .myPopup-tip
+    width 400px
+    text-align center
+    background-color $f2
+    padding 60px 40px
+    border-radius 12px
+    position relative
+    .close-btn
+      position absolute
+      top 10px
+      right 10px
+      display flex
+      align-items center
+      justify-content center
+      width 40px
+      height 40px
+      z-index 999
+      cursor: pointer
+      opacity .4
+      transition all .16s linear
+      &:hover
+        opacity 1
+      img
+        display block
+        width 16px
+        height 16px
+    h3.title
+      font-weight bold
+      color #2d3436
+      font-size 20px
+      margin-bottom 40px
+    .subtitle
+      text-align center
+      line-height 1.5
+      margin-bottom 50px
+    .secret-btn
+      background-color $btn31
+//导航栏
+.nav ul .router-link-active
+  color $btn31
+//复制按钮
+.copy-btn
+  display inline-block
+  width 32px
+  height 32px
+  background-size contain !important
+  cursor pointer
+  user-select none
+  &:active
+    opacity .6
+// 记录公用(以法币充值记录)
+.secret-log
+  .secret-title
+    margin-bottom 0
+  .secret-table
+    margin-top 40px
+    tr
+      &:first-child
+        background-color $f2
+      td
+        flex 1
+        &:nth-child(2), &:nth-child(3)
+          flex 1.8
+        &:nth-child(4), &:nth-child(5)
+          flex 1.3
+//表格
+.secret-table
+  display block
+  margin-top 60px
+  border-radius 6px
+  border 1px solid $border
+  overflow hidden
+  tr
+    height 48px
+    display flex
+    align-items center
+    border-bottom 1px solid $border
+    &:last-child
+      border-bottom none
+    &.secret-table-title
+      background-color $f2
+      justify-content center
+    td
+      display block
+      flex 1
+      text-align center
+      &:nth-child(2), &:nth-child(3), &:nth-child(4)
+        flex 1.4
+      &:last-child
+        flex 2
+//  记录详情共用表格
+.detail-table
+  display block
+  margin-top 40px
+  border 1px solid $border
+  border-radius 6px
+  overflow hidden
+  tr
+    display flex
+    border-bottom 1px solid $border
+    &:last-child
+      border-bottom none
+    td
+      display flex
+      align-items center
+      justify-content center
+      padding 12px 0
+      text-align center
+      &:first-child
+        width 140px
+        background-color $f2
+      &:last-child
+        flex 1
+        padding 12px 60px
+    &.hashTr
+      td
+        span
+          width 100%
+          word-break break-all
+          line-height 1.5
+          text-align center
+//转入和币币充值
+.transferIn
+  padding-top 60px
+  width 750px
+  .subtitle
+    line-height 1.5
+    margin-bottom 20px
+  .tip
+    line-height 1.5
+    margin-bottom 70px
+    span
+      color $btn31
+  .qrCodeBox
+    text-align center
+    .qrCode
+      display flex
+      width 240px
+      height 240px
+      align-items center
+      justify-content center
+      background-color #fff
+      margin 0 auto
+    .qrCodeBox-tip
+      margin-top 20px
+    .qrCodeBox-address
+      margin-top 80px
+      margin-bottom 40px
+    .secret-btn
+      width 240px
+      display inline-block
+//宽度1200父元素，绑定手机，安全码设置，公告详情，账户设置等
+.secret-wrap
+  width 1200px
+  min-height 1200px
+  margin 0 auto
+  padding 60px
+  position relative
+  border-radius 12px
+  background-color $c26
+  .secret-wrap-ct
+    width 660px
+    margin 0 auto
+    .title
+      font-size 30px
+      color #2d3436
+      text-align center
+      margin-bottom 60px
+    .complete-btn
+      margin-top 50px
+.secret-back
+  display flex
+  align-items center
+  position absolute
+  top 60px
+  left 60px
+  font-size 20px
+  font-weight bold
+  cursor pointer
+  user-select none
+  color $btn31
+  &:active
+    opacity .6
+  img
+    display inline-block
+    width 24px
+    height 17px
+.noticeDetail
+  .secret-wrap-ct
+    .content
+      p
+        line-height 1.5
+        color #2d3436
+        span
+          color #2d3436 !important
